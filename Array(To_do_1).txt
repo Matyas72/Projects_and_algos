@@ -1,0 +1,58 @@
+Push Front:
+
+function pushFront(arr, value) {
+	for(var i = arr.length; i > 0; i--){
+		arr[i] = arr[i-1]
+  }
+	 arr[0] = value;
+}
+
+
+Pop Front:
+
+function popFront(arr) {
+	var val = arr[0];
+	for(var i = 0; i < arr.length; i++)
+		arr[i] = arr[i + 1];
+	arr.pop()
+	return val;
+  
+}
+
+Insert At:
+
+function insert_at(arr,index,value){
+  for(var i = arr.length; i > index; i--){
+		arr[i] = arr[i-1]
+  }
+  arr[index] = value
+
+}
+
+Remove At:
+
+function removeAt(arr, idx,) {
+	
+	for(var i = idx; i < arr.length; i++)
+		arr[i] = arr[i + 1];
+	arr.pop()
+}
+
+Swap Pairs:
+
+function swapPairs(arr){
+  for(var i = 0; i < arr.length-1; i=i+2){
+    [arr[i], arr[i+1]] = [arr[i+1], arr[i]]
+  }
+}
+
+Remove Duplicates
+
+function removeDuplicates(arr) {
+	var newArr = [];
+	for(var i = 0; i < arr.length; i++) {
+		if(arr[i] !== arr[i+1]) 
+			newArr.push(arr[i])
+	}
+	return newArr;
+}
