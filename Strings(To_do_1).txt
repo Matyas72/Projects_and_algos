@@ -1,0 +1,67 @@
+Remove Blanks:
+
+function removeBlank(string){
+  var split_str =string.split(" ")
+  return split_str.join("")
+}
+
+Get Digits:
+
+function getDigits(string){
+  var split_str = string.split("")
+  var new_array = []
+
+  for(var i = 0;i<split_str.length;i++){
+    if(split_str[i]>=0){
+      new_array.push(split_str[i])
+    }
+    
+  }
+  var new_str = new_array.join("")
+}
+
+Acronyms:
+
+function acronyms(str) {
+    var strArr = str.split(" ");
+    var retStr = "";
+    for (var ind = 0; ind < strArr.length; ind++) {
+        if (strArr[ind] == false) {
+            continue;
+        } else {
+            retStr += strArr[ind][0].toUpperCase();
+        }
+    }
+    return retStr;
+}
+
+Count non-spaces:
+
+function countNS(str) {
+    var strArr = str.split("");
+    var count = 0;
+    for (var ind = 0; ind < strArr.length; ind++) {
+        if (strArr[ind] == false) {
+            continue;
+        } else {
+            count++;
+        }
+    }
+    return count;
+}
+
+Remove Shorter Strings:
+
+function removeShort(strArr, val) {
+    for (var ind = strArr.length-1; ind >= 0; ind--) {
+        if (strArr[ind].length < val) {
+            for (var i = ind; i < strArr.length-1; i++){
+                var temp = strArr[i];
+                strArr[i] = strArr[i+1];
+                strArr[i+1] = temp;
+            }
+            strArr.pop();
+        }
+    }
+    return strArr;
+}
